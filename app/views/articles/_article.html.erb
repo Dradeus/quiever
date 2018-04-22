@@ -1,0 +1,15 @@
+<div class="col-sm-3 single-post-card" id=<%= article_path(article.id) %>>
+  <div class="card">
+    <div class="card-block">
+      <h4 class="post-text">
+        <%= truncate(article.title, :length => 60) %>
+      </h4>
+      <div class="post-content">
+        <div class="posted-by">Posted by <%= article.user.name %></div>
+        <h3><%= article.title %></h3> 
+        <p><%= article.content %></p>
+        <%= link_to "I'm interested", article_path(article.id), class: 'interested' %>
+      </div>
+    </div>
+  </div><!-- card -->
+</div><!-- col-sm-3 -->
